@@ -16,14 +16,7 @@
         <h3>Server and System Information</h3>
         <ul>
             <c:set var="inet" value="${pageContext.request.remoteHost}" />
-            <c:set var="javaVersion" value="${systemProperties['java.version']}" />
-            <c:set var="javaVendor" value="${systemProperties['java.vendor']}" />
-            <c:set var="osName" value="${systemProperties['os.name']}" />
-            <c:set var="osArch" value="${systemProperties['os.arch']}" />
             <li>Host Name: ${inet}</li>
-            <li>Java Version: ${javaVersion}</li>
-            <li>Java Vendor: ${javaVendor}</li>
-            <li>Operating System: ${osName} (${osArch})</li>
         </ul>
     </div>
 
