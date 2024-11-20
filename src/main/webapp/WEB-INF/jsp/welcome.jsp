@@ -8,7 +8,7 @@
     <h2><fmt:message key="welcome"/></h2>
     <div class="row">
         <div class="col-md-12">
-            <spring:url value="/resources/images/pets.png" htmlEscape="true" var="petsImage"/>
+            <spring:url value="/resources/images/sesac_emot_06.png" htmlEscape="true" var="petsImage"/>
             <img class="img-responsive" alt="A cat and a dog" src="${petsImage}"/>
         </div>
     </div>
@@ -30,22 +30,6 @@
                 </c:when>
                 <c:otherwise>
                     <li>Client IP (X-Forwarded-For): None</li>
-                </c:otherwise>
-            </c:choose>
-        </ul>
-    </div>
-
-    <div class="session-info">
-        <h3>Session Information</h3>
-        <ul>
-            <c:choose>
-                <c:when test="${not empty session}">
-                    <li>Session ID: ${session.id}</li>
-                    <li>Creation Time: <fmt:formatDate value="${session.creationTime}" pattern="yyyy-MM-dd HH:mm:ss" /></li>
-                    <li>Last Accessed Time: <fmt:formatDate value="${session.lastAccessedTime}" pattern="yyyy-MM-dd HH:mm:ss" /></li>
-                </c:when>
-                <c:otherwise>
-                    <li>No active session</li>
                 </c:otherwise>
             </c:choose>
         </ul>
